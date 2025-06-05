@@ -2,6 +2,6 @@ package com.epam.dmytro_hashuk;
 
 public class Main {
     public static void main(String[] args) {
-        new StringProvider().getGreetings();
+
     }
 }
