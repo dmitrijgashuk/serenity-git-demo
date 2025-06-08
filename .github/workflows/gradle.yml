@@ -19,11 +19,8 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
-      - name: Install Google Chrome
-        uses: browser-actions/setup-chrome
-
-      - name: Check Chrome version
-        run: google-chrome --version
+      - uses: browser-actions/setup-chrome@v1
+      - run: chrome --version
 
       # Configure Gradle for optimal use in GitHub Actions, including caching of downloaded dependencies.
       # See: https://github.com/gradle/actions/blob/main/setup-gradle/README.md
