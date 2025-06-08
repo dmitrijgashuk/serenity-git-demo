@@ -1,4 +1,4 @@
-package com.epam.dmytro_hashuk.wikitest;
+package com.epam.dmytro_hashuk;
 
 import com.epam.dmytro_hashuk.driver.WebDriverProvider;
 import org.junit.jupiter.api.AfterEach;
@@ -8,13 +8,12 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.time.Duration;
 
-public class BaseWikiTest {
+public class WikiTest {
     public String wikiUrl = "https://www.wikipedia.org/";
     public WebDriver webDriver;
 
@@ -38,6 +37,6 @@ public class BaseWikiTest {
 
     @AfterEach
     public void shutDown(){
-
+        WebDriverProvider.quitWebDriver();
     }
 }
